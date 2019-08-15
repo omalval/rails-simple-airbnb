@@ -1,0 +1,25 @@
+<div class="flat-details">
+  <div class="flat container">
+  <div class="flat-header">
+    <h2><%= @flat.name %></h2>
+    <p><%= @flat.address %></p>
+  </div>
+  <div class="flat-description">
+    <h2> A bit more about this flat </h2>
+    <p><%= @flat.description %></p>
+  </div>
+</div>
+  <div class="flat-pratique">
+    <h2> Details </h2>
+    <div class="show-details-container">
+      <div class="icon-infos">
+        <i class="material-icons mr-2">people</i>
+        <span><%= @flat.number_of_guests %></span>
+      </div>
+      <div class="icon-infos">
+        <i class="material-icons mr-2">euro_symbol</i>
+        <span><%= @flat.price_per_night %></span>
+      </div>
+  </div>
+  </div>
+</div>

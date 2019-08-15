@@ -1,0 +1,17 @@
+<div class="form champ">
+<%= form_for(flat) do |f| %>
+  <div class="champ">
+    <%= f.label :name %>
+  </div>
+  <div class="champ"> <%= f.text_field :name %> </div>
+  <div class="champ">  <%= f.label :address %></div>
+  <div class="champ"><%= f.text_field :address %> </div>
+  <div class="champ"><%= f.label :description %></div>
+  <div class="champ"><%= f.text_field :description %></div>
+  <div class="champ"><%= f.label :price_per_night %></div>
+  <div class="champ"><%= f.text_field :price_per_night %></div>
+  <div class="champ"><%= f.label :number_of_guests %></div>
+  <div class="champ"><%= f.text_field :number_of_guests %></div>
+  <%= f.submit %>
+<% end %>
+</div>

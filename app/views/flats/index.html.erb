@@ -1,0 +1,31 @@
+<div class="container">
+  <h1> All our flats </h1>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+    <div class="card">
+      <div class="text-infos">
+        <h2><%= flat.name %></h2>
+        <p><%= flat.address %></p>
+        <div class="icon-infos-container">
+          <div class="icon-infos">
+            <i class="material-icons mr-2">people</i>
+            <span><%= flat.number_of_guests %></span>
+          </div>
+          <div class="icon-infos">
+            <i class="material-icons mr-2">euro_symbol</i>
+            <span><%= flat.price_per_night %></span>
+          </div>
+        </div>
+      </div>
+      <div class="foot-card">
+        <%= link_to 'More infos', flat_path(flat), class: "btn-yellow" %>
+        <%= link_to 'Edit', edit_flat_path(flat), class: "btn-green" %>
+        <%= link_to "Remove", flat_path(flat), class: "btn-red",
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+
